@@ -19,8 +19,8 @@ echo "Database created."
 
 # creates table
 echo "Creating table..."
-mysql -u"$MYSQLUSER" -p"$MYSQLPASS" -e "CREATE TABLE $MYTABLE (ID VARCHAR(255), Date TIMESTAMP, NativeLang VARCHAR(255), NativeCountry VARCHAR(255), PresentCountry VARCHAR(255), PresentCountryYears NUMERIC(5,2), PresentLang VARCHAR(255)); ALTER TABLE $MYTABLE ADD PRIMARY KEY (ID);" $MYDATABASE
-echo  "Table created."
+mysql -u"$MYSQLUSER" -p"$MYSQLPASS" -e "CREATE TABLE $MYTABLE (ID VARCHAR(255), Date TIMESTAMP, BornCountry VARCHAR(255), Age INT, VisitCountry VARCHAR(255), IceCream VARCHAR(255), SiblingNo INT); ALTER TABLE $MYTABLE ADD PRIMARY KEY (ID);" $MYDATABASE
+echo  "Table created with primary key."
 
 # writes data from tmp.csv into database table
 echo "Writing new data to $MYTABLE in database $MYDATABASE..."

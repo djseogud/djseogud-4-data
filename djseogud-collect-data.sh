@@ -15,7 +15,7 @@ echo "What is your favorite ice cream flavor?"
 read ICECREAM
 
 echo "How many siblings do you have?"
-read SIBLING
+read SIBLINGNO
 
 # records current time and date
 TIMESTAMP=`date --iso-8601=seconds`
@@ -24,7 +24,7 @@ TIMESTAMP=`date --iso-8601=seconds`
 IDENTIFIER="`echo $RANDOM$RANDOM$RANDOM | sha256sum | sed 's/[^0-9a-fA-F]//g' | sed -e 's/^/0x/'`"
 
 # writes data to temporary csv file
-echo "$IDENTIFIER,$TIMESTAMP,$BORNCOUNTRY,$AGE,$VISITCOUNTRY,$ICECREAM,$SIBLING" > ./tmp.csv
+echo "$IDENTIFIER,$TIMESTAMP,$BORNCOUNTRY,$AGE,$VISITCOUNTRY,$ICECREAM,$SIBLINGNO" > ./tmp.csv
 
 # reads data out to csv file
 cat ./tmp.csv

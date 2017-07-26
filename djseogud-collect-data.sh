@@ -29,7 +29,7 @@ echo "$IDENTIFIER,$TIMESTAMP,$BORNCOUNTRY,$AGE,$VISITCOUNTRY,$ICECREAM,$SIBLINGN
 # reads data out to csv file
 cat ./tmp.csv
 
-# w0rites data to database
+# writes data to database
 bash ./$GHUSERNAME-write-to-db.sh
 
 # backs up data
